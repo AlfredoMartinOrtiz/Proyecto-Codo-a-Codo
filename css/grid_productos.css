@@ -1,0 +1,192 @@
+/*----------------------------------------------------------------*/
+/* Hoja de estilos                                                */
+/*----------------------------------------------------------------*/
+/* Fuente para toda la página */
+* {
+    margin: 0;
+    padding: 0;
+    font-family:  'Roboto Slab', serif,'Courier New', Courier, monospace;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Definimos el contenedor grid                                   */
+/*----------------------------------------------------------------*/
+.contenedorprincipal {
+    display: grid;
+
+    /* Uso un atajo para definir tres filas / tres columnas */
+    grid-template: 100px auto auto / auto auto auto; 
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas: "cabeza cabeza cabeza" 
+                         "cat1 cat2 cat3" 
+                         "pie pie pie";
+
+    /* separamos los items con gap */
+    gap: 2%;
+
+    /* Hacemos que el diseño ocupe casi el alto total del navegador */
+    /*height: 90vh;*/ 
+}
+
+
+/*----------------------------------------------------------------*/
+/* Defino el nombre, color y alineación del texto de cada area del grid */*----------------------------------------------------------------*/
+.cabeza    { grid-area: cabeza;    background-color: orange;  }
+.cat1       { grid-area: cat1; background-color: orange; text-align: center; }
+.cat3       { grid-area: cat3;       background-color: rgb(177, 177, 66);text-align: center;  }
+.cat2       { grid-area: cat2;
+background-color: bisque;text-align: center;}
+.pie       { grid-area: pie;       background-color: orange;  }
+
+
+/*----------------------------------------------------------------*/
+/* Definimos la apariencia de cada item del grid                  */
+/*----------------------------------------------------------------*/
+.item {
+    padding: 10px;
+    color: darkgreen;
+    border-radius: 10px;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Imagen con bordes redondeados, con limites de tamaño           */
+/*----------------------------------------------------------------*/
+img {
+    border-radius: 30px;
+    width: 100%;
+    max-width:325px;
+  }
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo tablet                      */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+    .contenedorprincipal {
+        /* Uso un atajo para definir 4 filas / 2 columna */
+        grid-template: 100px auto auto auto / auto auto; 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "cabeza cabeza" "cat1 cat2" "cat3 cat3" "pie pie";
+    }
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo celular                     */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+    .contenedorprincipal {
+        /* Uso un atajo para definir 5 filas / 1 columna */
+        grid-template: 100px auto auto auto auto;
+        /*60px / 100%;*/ 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "cabeza" "cat1" "cat2" "cat3" "pie";
+    }
+}
+
+/* Centrado de texto para titulos y comentarios                     */
+/*----------------------------------------------------------------*/
+p.centrado { text-align: center; 
+}
+p.izquierda { text-align: left;
+}
+div.receta { text-align: left;
+    margin: 10px 1px;  
+}
+
+/* desde aca lo que estaba en styles.css CABECERA/MENU
+*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(241, 116, 116, 0.6), rgba(0,0,0,0.6)),url(images/Fondo.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #1713d6;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.boton-visit{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.boton-visit:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
