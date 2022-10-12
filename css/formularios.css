@@ -1,0 +1,92 @@
+/*----------------------------------------------------------------*/
+/* Hoja de estilos                                                */
+/*----------------------------------------------------------------*/
+/* Fuente para toda la página */
+* {font-family: 'Courier New', Courier, monospace;}
+
+
+/*----------------------------------------------------------------*/
+/* Definimos el contenedor grid                                   */
+/*----------------------------------------------------------------*/
+.contenedorprincipal {
+    display: grid;
+
+    /* Uso un atajo para definir 1 fila / 2 columnas */
+    grid-template: auto / auto auto; 
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas: "cat1 cat2";
+
+    /* separamos los items con gap */
+    gap: 2%;
+
+    /* Hacemos que el diseño ocupe casi el alto total del navegador */
+    /*height: 90vh;*/ 
+}
+
+
+/*----------------------------------------------------------------*/
+/* Defino el nombre, color y alineación del texto de cada area del grid */*----------------------------------------------------------------*/
+.cabeza    { grid-area: cabeza;    background-color: orange;  }
+.cat1       { grid-area: cat1; background-color: orange; text-align: center; }
+.cat3       { grid-area: cat3;       background-color: rgb(177, 177, 66);text-align: center;  }
+.cat2       { grid-area: cat2;
+background-color: bisque;text-align: center;}
+.cat4       { grid-area: cat4;
+    background-color: greenyellow;text-align: center;}
+.pie       { grid-area: pie;       background-color: orange;  }
+
+
+/*----------------------------------------------------------------*/
+/* Definimos la apariencia de cada item del grid                  */
+/*----------------------------------------------------------------*/
+.item {
+    padding: 10px;
+    color: darkgreen;
+    border-radius: 10px;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Imagen con bordes redondeados, con limites de tamaño           */
+/*----------------------------------------------------------------*/
+img {
+    border-radius: 30px;
+    width: 100%;
+    max-width:225px;
+  }
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo tablet                      */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+    .contenedorprincipal {
+        /* Uso un atajo para definir 1 filas / 2 columna */
+        grid-template: auto / auto auto; 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "cat1 cat2";
+    }
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo celular                     */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+    .contenedorprincipal {
+        /* Uso un atajo para definir 1 fila / 1 columna */
+        grid-template: auto / auto;
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "cat1" "cat2";
+    }
+}
+
+/* Centrado de texto para titulos y comentarios                     */
+/*----------------------------------------------------------------*/
+p.centrado { text-align: center; 
+}
+p.izquierda { text-align: left;
+}

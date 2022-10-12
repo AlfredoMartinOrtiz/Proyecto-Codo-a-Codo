@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formularios.css">
     <title>Usuarios</title>
 </head>
 <body>
@@ -21,9 +22,117 @@
     </header>
     <main>
         <br>       
-        <img src="Images/Fondo.png" width="700" height="500" alt="Imagen de presentación">
+        <img src="Images/Fondo.png" alt="Imagen de presentación">
         <br><br>
         <br>
+        <h3>Formulario Alta / Edición de Usuario</h3>
+
+        <form action="mostrar_datos.html" target="_blank">
+     
+    
+            <fieldset>
+                <legend>DATOS PERSONALES</legend>
+                <!-- Ingreso del nombre -->   
+                <label for="nombre">Nombre ----------> </label>
+                <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui....." >
+                <br><br>
+                <!-- Ingreso del apellido -->
+                <label for="apellido">Apellido --------> </label>
+                <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui..." >
+                <br><br>
+                <!-- Ingreso del DNI -->
+                <label for="dni">Nro DNI ---------> </label>
+                <input type="number" name="dni">
+                <br><br>
+                <!-- Ingreso Fecha de nacimiento -->
+                <label for="fecha">Fecha de nac. ---> </label>
+                <input type="date" name="fecha">
+                <br><br>
+                <!-- Ingreso de la dirección -->
+                <label for="campodir">Calle -----------> </label>
+                <input size="20" type="text" name="direccion" id="campodir">
+                <br><br>
+                <label for="dirnumero">Número ----------> </label>
+                <input type="number" name="dirnumero">
+                <br><br>
+                <!-- Seleccion de la zona -->
+                Zona geográfica ->
+                <select name="zona">
+                    <option>Seleccione zona...</option>
+                    <option>CABA</option>
+                    <option>Conurbano</option>
+                    <option>Resto Prov. Bs.As.</option>
+                    <option>Otras Prov.</option>
+                    <option>Exterior</option>
+                </select>
+                <br><br>
+                <!-- Ingreso de la dirección de correo-->
+                <label for="email">email -----------> </label>
+                <input type="email" name="email">
+                <br><br>
+                <!-- Ingreso de un archivo-->
+                <label for="foto">Foto: </label>
+                <input type="file" name="foto">
+            </fieldset>
+            <br>
+            <!-- Seleccion de intereses -->
+            <fieldset>
+                <legend>INTERES PERSONAL</legend>
+                <input type="radio" id="consolas" name="intereses" value="Consolas">
+                <label for="consolas">Consolas</label>
+    
+                <input type="radio" id="juegos" name="intereses" value="Juegos">
+                <label for="juegos">Juegos</label>
+    
+                <input type="radio" id="ambos" name="intereses" value="Ambos">
+                <label for="ambos">Ambos</label>
+            </fieldset>
+    
+            <!-- Seleccion de Lenguaje de programacion -->
+            <br>
+            <fieldset>
+                <legend>PREFERENCIAS CONSOLAS</legend>
+                <input type="checkbox" id="playstation" name="preferencias" value="Playstation">
+                <label for="playstation">Playstation</label>
+        
+                <input type="checkbox" id="nintendo" name="preferencias" value="Nintendo">
+                <label for="nintendo">Nintendo</label><br>
+
+                <input type="checkbox" id="xbox" name="preferencias" value="Xbox">
+                <label for="xbox">X-Box</label>
+
+                <input type="checkbox" id="genericas" name="preferencias" value="Genericas">
+                <label for="genericas">Genericas</label><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>PREFERENCIAS JUEGOS</legend>
+            
+                <input type="checkbox" id="accion" name="preferencias" value="JuegosAccion">
+                <label for="accion">De acción</label>
+
+                <input type="checkbox" id="carrera" name="preferencias" value="JuegosCarrera">
+                <label for="carrera">De carrera</label><br>
+        
+                <input type="checkbox" id="mesa" name="preferencias" value="JuegosMesa">
+                <label for="mesa">De mesa</label>
+        
+                <input type="checkbox" id="clasicos" name="preferencias" value="JuegosClasicos">
+                <label for="clasicos">Clasicos</label>
+        
+            </fieldset>
+            <br>
+    
+            <!-- Comentario -->
+            <label for="comentario">Comentarios:</label><br>
+            <textarea name="comentario" id="comentario" cols="60" rows="4"></textarea>
+    
+            <!-- Botones para controlar el formulario -->
+            <br><br>
+            <input type="reset" value="Borrar formulario">
+            <input type="submit" value="Enviar datos">
+        </form>
+    
     </main>
     <footer>
         <p>Derechos reservados @2022</p>
