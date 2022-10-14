@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contacto.css">
+    <link rel="icon" href="img/logo2.ico">
     <title>Contacto</title>
+
 </head>
 <body>
     <header>
@@ -25,98 +27,101 @@
         <img src="Images/Fondo.png" alt="Imagen de presentación">
         <br><br>
         <br>
-        <P>VEN A VISITARNOS</P>
-        <img src="img/Edificio Codo Gaming.jpg" alt="Imagen Codo Gaming House">
-        <br>
-        <P>NUESTRA UBICACION</P>
-        Carlos H Perette y Calle 10, 5to piso. CABA
-        <br>
-        Lunes a Viernes 09 a 18 Hs
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7812.8631725060295!2d-58.38143980040608!3d-34.581287543328706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665681126498!5m2!1ses-419!2sar" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <P>NUESTROS MEDIOS DE CONTACTO</P>
-        <a href="https://www.facebook.com/" target="_blank"><img class="red" src="img/facebook.png" alt="Imagen facebook"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img class="red" src="img/Instagram-logo.jpg" alt="Imagen instgram"></a>
-        <a href="https://www.web.whatsaap.com" target="_blank"><img class="red" src="img/whatsapp.jpg" alt="Imagen whatsaap"></a>
-        <a href="https://www.twitter.com" target="_blank"><img class="red" src="img/twitter1.png" alt="Imagen twitter"></a>
-        
-        <h2>Formulario Contacto</h2>
-        
-        <form name="formAlta" action="mostrar_datos.html" target="_blank">
-     
-    
-            <fieldset>
-                <legend>DATOS CONTACTO</legend>
-                <!-- Ingreso del nombre -->   
-                <label for="nombre">Nombre ----------> </label>
-                <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui....." >
-                <br><br>
-                <!-- Ingreso del apellido -->
-                <label for="apellido">Apellido --------> </label>
-                <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui..." >
-                <br><br>
-                <!-- Seleccion de interes -->
-                Motivo Contacto ->
-                <select name="interes">
-                    <option>Seleccione Motivo Contacto .</option>
-                    <option>Consolas</option>
-                    <option>Juegos</option>
-                    <option>Ambos Productos</option>
-                    <option>Otras Consultas</option>
-                </select>
-                <br><br>
-                <!-- Ingreso de la dirección de correo-->
-                <label for="email">email -----------> </label>
-                <input size="30" type="email" name="email" placeholder="Ingrese su email aqui...">
-                <br><br>
-                Subir Archivo: (Opcional)
+        <div class="contenedorprincipal">
+            <!-- DATOS LOCALIZACION -->
+            <div class="item cat1">
+                <h2>VEN A VISITARNOS</h2>
+                <img src="img/Edificio Codo Gaming.jpg" alt="Imagen Codo Gaming House">
                 <br>
-                <!-- Ingreso de un archivo-->
-                <label for="archivo"></label>
-                <input type="file" name="archivo">
+                <P>NUESTRA UBICACION</P>
+                Carlos H Perette y Calle 10, 5to piso. CABA
+                <br>
+                Lunes a Viernes 09 a 18 Hs
                 <br><br>
-                <!-- Comentario -->
-            <label for="comentario">Motivo Contacto: (Opcional)</label><br>
-            <textarea name="comentario" id="comentario" cols="53" rows="15"></textarea>
-            </fieldset>
-            <h5>Le enviaremos la respuesta a su email a la brevedad</h5>    
-            <!-- Botones para controlar el formulario -->
-            <input type="reset" value="Borrar formulario">
-            <input type="button" id="b1" value="Validar y Enviar datos" onclick="validarEnviar()">
-        </form>
-
-        <script>
-            // Esta función valida todos los campos del form.
-            // Si alguno no cumple con los requisitos, se aborta
-            // con return. Caso contrario, al final se realiza
-            // efectivamente el envio de los datos.
-    
-            function validarEnviar() {
-                if (document.formAlta.nombre.value.length <= 2) {
-                    alert("Tiene que escribir su nombre")
-                    document.formAlta.nombre.focus()
-                    return 0;
-                }
-                if (document.formAlta.apellido.value.length <= 2) {
-                    alert("Tiene que escribir su apellido")
-                    document.formAlta.apellido.focus()
-                    return 0;
-                } 
-                if (document.formAlta.interes.selectedIndex == 0) {
-                    alert("Debe seleccionar el motivo de su contacto")
-                    document.formAlta.interes.focus()
-                    return 0;
-                }
-                if (document.formAlta.email.value.length <= 2) {
-                    alert("Debe dejarnos su email para enviar la respuesta")
-                    document.formAlta.email.focus()
-                    return 0;
-                }
-                //Finalmente, si llegó hasta aqui, se envia el form.
-                alert("Muchas gracias por enviar el formulario");
-                document.formAlta.submit();
-            }
-        </script>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7812.8631725060295!2d-58.38143980040608!3d-34.581287543328706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1665681126498!5m2!1ses-419!2sar" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="centrado"><b>NUESTRAS REDES</b></p>
+                <a href="https://www.facebook.com/" target="_blank"><img class="red" src="img/facebook.png" alt="Imagen facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="red" src="img/Instagram-logo.jpg" alt="Imagen instgram"></a>
+                <a href="https://www.web.whatsaap.com" target="_blank"><img class="red" src="img/whatsapp.jpg" alt="Imagen whatsaap"></a>
+                <a href="https://www.twitter.com" target="_blank"><img class="red" src="img/twitter1.png" alt="Imagen twitter"></a>
+            </div>
+            <!-- FORMULARIO DE CONTACTO -->
+            <div class="item cat2">
+                <h2>Formulario Contacto</h2>
+                <form name="formContacto" action="mostrar_datos.html" target="_blank">
+                    <fieldset>
+                        <legend>DATOS CONTACTO</legend>
+                        <!-- Ingreso del nombre -->   
+                        <label for="nombre">Nombre ----------> </label>
+                        <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui....." >
+                        <br><br>
+                        <!-- Ingreso del apellido -->
+                        <label for="apellido">Apellido --------> </label>
+                        <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui..." >
+                        <br><br>
+                        <!-- Seleccion de interes -->
+                        Motivo Contacto ->
+                        <select name="interes">
+                            <option>Seleccione Motivo Contacto .</option>
+                            <option>Consolas</option>
+                            <option>Juegos</option>
+                            <option>Ambos Productos</option>
+                            <option>Otras Consultas</option>
+                        </select>
+                        <br><br>
+                        <!-- Ingreso de la dirección de correo-->
+                        <label for="email">email -----------> </label>
+                        <input size="30" type="email" name="email" placeholder="Ingrese su email aqui...">
+                        <br><br>
+                        Subir Archivo: (Opcional)
+                        <br>
+                        <!-- Ingreso de un archivo-->
+                        <label for="archivo"></label>
+                        <input type="file" name="archivo">
+                        <br><br>
+                        <!-- Comentario -->
+                        <label for="comentario">Motivo Contacto: (Opcional)</label><br>
+                        <textarea name="comentario" id="comentario" cols="53" rows="15"></textarea>
+                    </fieldset>
+                    <h5>Le enviaremos la respuesta a su email a la brevedad</h5>    
+                    <!-- Botones para controlar el formulario -->
+                    <input type="reset" value="Borrar formulario">
+                    <input type="button" id="b1" value="Validar y Enviar datos" onclick="validarEnviar()">
+                </form>
+                <script>
+                    // Esta función valida todos los campos del form.
+                    // Si alguno no cumple con los requisitos, se aborta
+                    // con return. Caso contrario, al final se realiza
+                    // efectivamente el envio de los datos.
+            
+                    function validarEnviar() {
+                        if (document.formContacto.nombre.value.length <= 2) {
+                            alert("Tiene que escribir su nombre")
+                            document.formContacto.nombre.focus()
+                            return 0;
+                        }
+                        if (document.formContacto.apellido.value.length <= 2) {
+                            alert("Tiene que escribir su apellido")
+                            document.formContacto.apellido.focus()
+                            return 0;
+                        } 
+                        if (document.formContacto.interes.selectedIndex == 0) {
+                            alert("Debe seleccionar el motivo de su contacto")
+                            document.formContacto.interes.focus()
+                            return 0;
+                        }
+                        if (document.formContacto.email.value.length <= 2) {
+                            alert("Debe dejarnos su email para enviar la respuesta")
+                            document.formContacto.email.focus()
+                            return 0;
+                        }
+                        //Finalmente, si llegó hasta aqui, se envia el form.
+                        alert("Muchas gracias por enviar el formulario");
+                        document.formContacto.submit();
+                    }
+                </script>        
+            </div>                
+        </div>
     </main>
     <footer>
         <p>Derechos reservados @2022</p>

@@ -53,7 +53,7 @@ background-color: bisque;text-align: center;}
 img {
     border-radius: 30px;
     width: 100%;
-    max-width:225px;
+    max-width:350px;
   }
 
 
@@ -92,7 +92,7 @@ p.izquierda { text-align: left;
 }
 img.red {
     border-radius: 10px;
-    width: 20%;
-    max-width:125px;
+    width: 15%;
+    max-width:50px;
   }
 
