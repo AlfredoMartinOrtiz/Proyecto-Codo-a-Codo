@@ -83,43 +83,13 @@
                         <label for="comentario">Motivo Contacto: (Opcional)</label><br>
                         <textarea name="comentario" id="comentario" cols="53" rows="15"></textarea>
                     </fieldset>
-                    <h5>Le enviaremos la respuesta a su email a la brevedad</h5>    
-                    <!-- Botones para controlar el formulario -->
-                    <input type="reset" value="Borrar formulario">
-                    <input type="button" id="b1" value="Validar y Enviar datos" onclick="validarEnviar()">
+                 <h5>Le enviaremos la respuesta a su email a la brevedad</h5>    
+                 <!-- Botones para controlar el formulario -->
+                 <input type="reset" value="Borrar formulario">
+                 <input type="button" id="b1" value="Validar y Enviar datos" onclick="validarEnviar()">
+                 <!-- funcion de validacion del formulario-->
+                 <script src="js/contacto.js"></script>
                 </form>
-                <script>
-                    // Esta función valida todos los campos del form.
-                    // Si alguno no cumple con los requisitos, se aborta
-                    // con return. Caso contrario, al final se realiza
-                    // efectivamente el envio de los datos.
-            
-                    function validarEnviar() {
-                        if (document.formContacto.nombre.value.length <= 2) {
-                            alert("Tiene que escribir su nombre")
-                            document.formContacto.nombre.focus()
-                            return 0;
-                        }
-                        if (document.formContacto.apellido.value.length <= 2) {
-                            alert("Tiene que escribir su apellido")
-                            document.formContacto.apellido.focus()
-                            return 0;
-                        } 
-                        if (document.formContacto.interes.selectedIndex == 0) {
-                            alert("Debe seleccionar el motivo de su contacto")
-                            document.formContacto.interes.focus()
-                            return 0;
-                        }
-                        if (document.formContacto.email.value.length <= 2) {
-                            alert("Debe dejarnos su email para enviar la respuesta")
-                            document.formContacto.email.focus()
-                            return 0;
-                        }
-                        //Finalmente, si llegó hasta aqui, se envia el form.
-                        alert("Muchas gracias por enviar el formulario");
-                        document.formContacto.submit();
-                    }
-                </script>        
             </div>                
         </div>
     </main>
