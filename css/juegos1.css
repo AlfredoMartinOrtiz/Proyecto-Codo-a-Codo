@@ -24,11 +24,11 @@
 .contenedorprincipal {
     display: grid;
 
-    /* Uso un atajo para definir 1 fila / 2 columnas */
-    grid-template: auto / auto; 
+    /* Uso un atajo para definir 1 fila / 4 columnas */
+    grid-template: auto / auto auto auto auto; 
 
     /* Distribuimos el contenido en cada fila */
-    grid-template-areas: "cat1";
+    grid-template-areas: "cat1 cat2 cat3 cat4";
 
     /* separamos los items con gap */
     gap: 2%;
@@ -88,7 +88,7 @@ nav img{
     color:rgb(0, 0, 0);
     font-size: xx-large;  
     position: absolute;
-    top: 2.5%;
+    top: 1.5%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -96,7 +96,7 @@ nav img{
 
 /*----------------------------------------------------------------*/
 /* Defino el nombre, color y alineación del texto de cada area del grid */*----------------------------------------------------------------*/
-.cabeza    { grid-area: cabeza;    background-color: rgb(114, 134, 248); text-align: center;  }
+.cabeza    { grid-area: cabeza;    background-color: rgb(114, 134, 248);  }
 .cat1       { grid-area: cat1; background-color: rgb(114, 134, 248); text-align: center; }
 .cat3       { grid-area: cat3;       background-color: rgb(114, 134, 248);text-align: center;  }
 .cat2       { grid-area: cat2;
@@ -132,10 +132,10 @@ img {
 @media only screen and (max-width: 800px) {
     .contenedorprincipal {
         /* Uso un atajo para definir 1 filas / 2 columna */
-        grid-template: auto / auto; 
+        grid-template: auto / auto auto; 
 
         /* Distribuimos el contenido en cada fila */
-        grid-template-areas: "cat1";
+        grid-template-areas: "cat1 cat2" "cat3 cat4";
     }
 }
 
@@ -149,7 +149,7 @@ img {
         grid-template: auto / auto;
 
         /* Distribuimos el contenido en cada fila */
-        grid-template-areas: "cat1";
+        grid-template-areas: "cat1" "cat2" "cat3" "cat4";
     }
 }
 

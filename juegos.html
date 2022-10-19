@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/juegos.css">
+    <link rel="stylesheet" href="css/juegos1.css">
     <link rel="icon" href="img/logo2.ico">
     <title>Juegos</title>
 </head>
 <body>
+    <section class="fondo">
     <header>
-        <h1>JUEGOS Gaming House</h1>    
+        <div class="text-box">
+            <h1>JUEGOS Gaming House</h1>
+            <!--<a href="" class="boton-visit">Ven a visitarnos</a>-->
+        </div>    
+        
         <nav>
-            <ul>
-                <li><a href="consolas.html">CONSOLAS</a></li>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
-                <li><a href="usuarios.html">USUARIOS</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
-            </ul>
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="consolas.html">CONSOLAS</a></li>
+                    <li><a href="juegos.html">JUEGOS</a></li>
+                    <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
+                    <li><a href="usuarios.html">USUARIOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
     <main>
-        <br>       
-        <img src="Images/Fondo.png" alt="Imagen Fondo">
-        <br><br>
-        <br>
+       
+
         <div class="contenedorprincipal">
             <!-- JUEGOS DE ACCION -->
             <div class="item cat1">
@@ -195,5 +203,6 @@
     <footer>
         <p>Derechos reservados @2022</p>
     </footer>
+</section>
 </body>
 </html>

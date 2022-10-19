@@ -2,8 +2,21 @@
 /* Hoja de estilos                                                */
 /*----------------------------------------------------------------*/
 /* Fuente para toda la página */
-* {font-family: 'Courier New', Courier, monospace;}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
 
+/* Background igual al del Index.html */
+.fondo{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(241, 116, 116, 0.6), rgba(0,0,0,0.6)),url(images/Fondo.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
 
 /*----------------------------------------------------------------*/
 /* Definimos el contenedor grid                                   */
@@ -24,17 +37,73 @@
     /*height: 90vh;*/ 
 }
 
+/* Estilo del menú de navegación */
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: rgb(65, 62, 62);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #1713d6;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+.text-box{
+    width: 90%;
+    color:rgb(0, 0, 0);
+    font-size: xx-large;  
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
 
 /*----------------------------------------------------------------*/
 /* Defino el nombre, color y alineación del texto de cada area del grid */*----------------------------------------------------------------*/
-.cabeza    { grid-area: cabeza;    background-color: orange;  }
-.cat1       { grid-area: cat1; background-color: orange; text-align: center; }
-.cat3       { grid-area: cat3;       background-color: rgb(177, 177, 66);text-align: center;  }
+.cabeza    { grid-area: cabeza;    background-color: rgb(114, 134, 248);  }
+.cat1       { grid-area: cat1; background-color: rgb(114, 134, 248); text-align: center; }
+.cat3       { grid-area: cat3;       background-color: rgb(114, 134, 248);text-align: center;  }
 .cat2       { grid-area: cat2;
-background-color: bisque;text-align: center;}
+background-color: rgb(114, 134, 248);text-align: center;}
 .cat4       { grid-area: cat4;
-    background-color: greenyellow;text-align: center;}
-.pie       { grid-area: pie;       background-color: orange;  }
+    background-color: rgb(114, 134, 248);text-align: center;}
+.pie       { grid-area: pie;       background-color: rgb(114, 134, 248);  }
 
 
 /*----------------------------------------------------------------*/
@@ -42,7 +111,7 @@ background-color: bisque;text-align: center;}
 /*----------------------------------------------------------------*/
 .item {
     padding: 10px;
-    color: darkgreen;
+    color: rgb(54, 26, 13);
     border-radius: 10px;
 }
 

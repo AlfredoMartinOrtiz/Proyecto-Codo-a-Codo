@@ -9,24 +9,30 @@
     <title>Consolas</title>
 </head>
 <body>
+    <section class="fondo">
     <header>
-        <h1>CONSOLAS Gaming House</h1>    
+        <div class="text-box">
+            <h1>CONSOLAS Gaming House</h1>
+            <!--<a href="" class="boton-visit">Ven a visitarnos</a>-->
+        </div>
+          
         <nav>
-            <ul>
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="juegos.html">JUEGOS</a></li>
-                <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
-                <li><a href="usuarios.html">USUARIOS</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
-            </ul>
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="consolas.html">CONSOLAS</a></li>
+                    <li><a href="juegos.html">JUEGOS</a></li>
+                    <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
+                    <li><a href="usuarios.html">USUARIOS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
     <main>
-        <br>       
-        <img src="Images/Fondo.png" alt="Imagen Fondo">
-        <br><br>
-        <br>
-        
+    
         <div class="contenedorprincipal">
             <!-- PLAYSTATION -->
             <div class="item cat1">
@@ -130,9 +136,11 @@
             </div>        
         </div>
     </main>
+
     <footer>
         <br>
         <p>Derechos reservados @2022</p>
     </footer>
+</section>
 </body>
 </html>
