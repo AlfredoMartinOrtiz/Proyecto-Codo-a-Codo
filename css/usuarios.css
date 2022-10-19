@@ -159,3 +159,5 @@ p.centrado { text-align: center;
 }
 p.izquierda { text-align: left;
 }
+p.titulo { text-align: center;font-size: 2rem;
+}

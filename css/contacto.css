@@ -163,4 +163,6 @@ img.red {
     width: 15%;
     max-width:50px;
   }
-
+p.titulo { text-align: center;font-size: 2rem;
+}
+  
