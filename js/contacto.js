@@ -11,14 +11,14 @@ function validarEnviar() {
                             document.formContacto.apellido.focus()
                             return 0;
                         } 
-                        if (document.formContacto.interes.selectedIndex == 0) {
-                            alert("Debe seleccionar el motivo de su contacto")
-                            document.formContacto.interes.focus()
-                            return 0;
-                        }
                         if (document.formContacto.email.value.length <= 2) {
                             alert("Debe dejarnos su email para enviar la respuesta")
                             document.formContacto.email.focus()
+                            return 0;
+                        }
+                        if (document.formContacto.interes.selectedIndex == 0) {
+                            alert("Debe seleccionar el motivo de su contacto")
+                            document.formContacto.interes.focus()
                             return 0;
                         }
                         //Finalmente, si llegó hasta aqui, se envia el form.

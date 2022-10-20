@@ -33,6 +33,8 @@
     /* separamos los items con gap */
     gap: 2%;
 
+    justify-content: center;
+
     /* Hacemos que el diseño ocupe casi el alto total del navegador */
     /*height: 90vh;*/ 
 }

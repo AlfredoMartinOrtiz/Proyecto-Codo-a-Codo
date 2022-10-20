@@ -44,6 +44,11 @@
             document.formAlta.numerodir.focus()
             return 0;
         }
+        if (document.formAlta.email.value.length <= 2) {
+            alert("Debe dejarnos su email para enviar la respuesta")
+            document.formAlta.email.focus()
+            return 0;
+        }
         if (document.formAlta.zona.selectedIndex == 0) {
             alert("Debe seleccionar una zona de residencia")
             document.formAlta.zona.focus()

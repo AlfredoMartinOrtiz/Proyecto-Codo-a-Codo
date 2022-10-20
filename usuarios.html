@@ -32,34 +32,39 @@
     <div class="contenedorprincipal">
         <!-- JUEGOS -->
         <div class="item cat1">
-            <form name="formAlta" action="mostrar_datos.html" target="_blank"> 
+            <!--<form name="formAlta" action="mostrar_datos.html" target="_blank">-->
+            <form name="formAlta" action="Link" method="POST" target="_blank"> 
                 <fieldset>
                     <legend>DATOS PERSONALES</legend>
                     <!-- Ingreso del nombre -->   
-                    <label for="nombre">Nombre ----------> </label>
-                    <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui....." >
+                    <label for="nombre"></label>
+                    <input size="30" type="text" name="nombre" placeholder="Ingrese su NOMBRE aqui....." >
                     <br><br>
                     <!-- Ingreso del apellido -->
-                    <label for="apellido">Apellido --------> </label>
-                    <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui..." >
+                    <label for="apellido"></label>
+                    <input size="30" type="text" name="apellido" placeholder="Ingrese su APELLIDO aqui..." >
                     <br><br>
                     <!-- Ingreso del DNI -->
-                    <label for="dni">Nro DNI ---------> </label>
-                    <input type="number" name="dni">
+                    <label for="dni"></label>
+                    <input type="number" name="dni" placeholder="Ingrese su DNI aqui.." >
                     <br><br>
                     <!-- Ingreso Fecha de nacimiento -->
-                    <label for="edad">Edad ------------> </label>
-                    <input type="number" name="edad">
+                    <label for="edad"></label>
+                    <input type="number" name="edad" placeholder="Ingrese su EDAD aqui.." >
                     <br><br>
                     <!-- Ingreso de la dirección -->
-                    <label for="calledir">Calle -----------> </label>
-                    <input size="20" type="text" name="direccion" id="calledir">
+                    <label for="calledir"></label>
+                    <input size="20" type="text" name="direccion" id="calledir"placeholder="Ing. su CALLE DOMICILIO">
                     <br><br>
-                    <label for="numerodir">Número ----------> </label>
-                    <input type="number" name="numerodir">
+                    <label for="numerodir"></label>
+                    <input type="number" name="numerodir" placeholder="Ing. su NUMERO de DOM.">
+                    <br><br>
+                    <!-- Ingreso de la dirección de correo-->
+                    <label for="email"></label>
+                    <input type="email" name="email" placeholder="Ing. su EMAIL aqui ...">
                     <br><br>
                     <!-- Seleccion de la zona -->
-                    Zona geográfica ->
+                    Zona Geografica de residencia :
                     <select name="zona">
                         <option>Seleccione zona...</option>
                         <option>CABA</option>
@@ -70,7 +75,7 @@
                     </select>
                     <br><br>
                     <!-- Seleccion de interes -->
-                    Interes Personal->
+                    Interes Personal ---------------->
                     <select name="interes">
                         <option>Seleccione Interes</option>
                         <option>Consolas</option>
@@ -78,12 +83,8 @@
                         <option>Ambos</option>
                     </select>
                     <br><br>
-                    <!-- Ingreso de la dirección de correo-->
-                    <label for="email">email -----------> </label>
-                    <input type="email" name="email">
-                    <br><br>
                     <!-- Ingreso de un archivo-->
-                    <label for="foto">Foto: </label>
+                    <label for="foto">Opcional--> </label>
                     <input type="file" name="foto">
                 </fieldset>
                 <br>
